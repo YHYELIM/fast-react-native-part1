@@ -41,43 +41,43 @@ const FriendList =()=>{
 };
 /*텍스트는 이름 하나만  */
 /*이미지의 크기지정을 해줘야 이미지가 뜬다 */
-// const Profile =(props)=>{
-//   return(
-    // <View style={{flexDirection:"row"}}>
-    //   <Image source = {{uri : props.uri}}
-    //   style={{
-    //     width:props.profileSize,
-    //     height:props.profileSize,
-    //   }}
-    
-    //   />
-    //   <Text>{props.name}</Text>
-    // </View>
-//   );
-// }
-
-class Profile extends React.Component{
-  render(){
-    return(
-      <View style={{flexDirection:"row"}}>
-      <Image source = {{uri : this.props.uri}}
+const Profile =(props)=>{
+  return(
+    <View style={{flexDirection:"row"}}>
+      <Image source = {{uri : props.uri}}
       style={{
-        width:this.props.profileSize,
-        height:this.props.profileSize,
+        width:props.profileSize,
+        height:props.profileSize,
       }}
     
       />
-      <Text>{this.props.name}</Text>
+      <Text>{props.name}</Text>
     </View>
-    );
-
-  }
-
+  );
 }
 
+// class Profile extends React.Component{
+//   render(){
+//     return(
+//       <View style={{flexDirection:"row"}}>
+//       <Image source = {{uri : this.props.uri}}
+//       style={{
+//         width:this.props.profileSize,
+//         height:this.props.profileSize,
+//       }}
+    
+//       />
+//       <Text>{this.props.name}</Text>
+//     </View>
+//     );
 
+//   }
+
+// }
+
+//App: 최상위 컴포넌트 
 /*뷰 인에 자식으로 넣어줌 */
-  /* MyProfile,FriendList 깉은 컴포넌트 사용*/
+  /* MyProfile,FriendList : 깉은 컴포넌트 사용*/
 export default function App() {
   return (
     <View style={styles.container}>
